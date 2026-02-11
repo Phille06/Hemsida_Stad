@@ -1,17 +1,137 @@
-# Syfte
+# GävleGuiden
 
-Hemsidan ska vara till staden gävle. Det ska vara en informations sida om olika platser inom gävle. Det ska vara som följer Boulongerskogen, Gävlebocken (bilder måste tas ifrån online men följa Upphovsrätten), Järnvägsmuseet, Fängelsemuseet, Gävle Konserthus, Fjärran höjder. Alla platser ska ha 1-3 bilder och alla förutom Gävle bocken ska tas själv. Värje plats/bild ska ha kort information om platsen. Det ska finnas en knapp som man kan byta emellan Ljus/Mörkt på hemsidan detta ska göras med hjälp av javascript. Detta ska sparas i lokalstorage på enheten så vi slipper ha en database bakom hemsidan. Hemsidan ska ha en navbar för dess olika platser samt övrig information som kontakt/om oss, samt footer med år tal, det ska hämtas med javascript så via kan dynamiskt uppdatera footer så hemsidan inte måste underhållas. Hemsidan ska även vara responsiv för använding på pc samt mobil osv. Hemsidan är helt enkelt frö att locka turister samt vara informativ. CSS ska anändas via extern css fil i src/css. På varje Plats ska det även finns en extern länk till platsens plats via google maps. Sidan ska heta GävleGuiden. Varje Plats ska också ha bilderna i en flexbox. 
+## 📌 Syfte
 
-# 🎨 Färg tema 
+Syftet med projektet **GävleGuiden** är att skapa en modern, informativ och visuellt tilltalande webbplats som presenterar utvalda sevärdheter i **Gävle**.  
+Webbplatsen ska fungera som en digital guide för både turister och invånare genom att erbjuda lättillgänglig information, bilder och externa länkar till varje plats.
 
-## 🔴 Tema färger
+Hemsidan ska:
+- Väcka intresse för Gävle som besöksmål
+- Vara informativ och lättnavigerad
+- Fungera på dator, surfplatta och mobil
+- Vara helt statisk utan backend eller databas
+
+
+
+## 📋 Kravspecifikation
+
+### 🗺️ Innehåll
+Webbplatsen ska innehålla informationssidor för följande platser:
+- Boulognerskogen
+- Gävlebocken
+- Järnvägsmuseet
+- Fängelsemuseet
+- Gävle Konserthus
+- Fjärran Höjder
+
+För varje plats gäller:
+- **1–3 bilder per plats**
+- Bilder på alla platser **förutom Gävlebocken** ska vara egenfotograferade
+- Bilder på Gävlebocken får hämtas online och måste följa **upphovsrätt**
+- Kort, beskrivande information om platsen
+- Extern länk till platsens position via **Google Maps**
+- Bilder ska visas med **CSS Flexbox**
+
+
+
+### 🎨 Design & Användarupplevelse
+- Webbplatsens namn ska vara **GävleGuiden**
+- Navigationsmeny (navbar) ska finnas på alla sidor och innehålla:
+  - Länkar till samtliga platser
+  - Om oss
+  - Kontakt
+- Footer ska innehålla:
+  - Dynamiskt årtal som hämtas via JavaScript
+- Webbplatsen ska ha **Ljust och Mörkt läge**
+  - Växling sker via knapp
+  - Valet sparas i `localStorage`
+- Webbplatsen ska vara **responsiv** för PC, surfplatta och mobil
+
+
+
+### 🧑‍💻 Teknik & Struktur
+
+#### Fil- och mappstruktur
+Projektet ska använda följande struktur:
+
+```
+
+src/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── platser/
+├── boulognerskogen.html
+├── gavlebocken.html
+├── jarnvagsmuseet.html
+├── fangelsemuseet.html
+├── konserthuset.html
+└── fjarran-hojder.html
+
+```
+
+- `index.html` ska ligga i `src/`
+- Alla platser ska ha **egna HTML-filer** i `src/platser/`
+- All JavaScript-kod ska ligga i `src/js/main.js`
+- All CSS ska ligga i extern fil:  
+  `src/css/style.css`
+- Ingen backend eller databas ska användas
+- Projektet ska publiceras på GitHub med **MIT-licens**
+
+
+
+## 🛠️ Genomförande
+
+### 1️⃣ Planering
+- Välja platser och samla information
+- Ta egna bilder
+- Säkerställa upphovsrätt för externa bilder
+
+
+
+### 2️⃣ Struktur & HTML
+- Skapa `index.html` som startsida
+- Skapa separata HTML-sidor för varje plats
+- Implementera gemensam navbar och footer
+
+
+
+### 3️⃣ CSS & Layout
+- Implementera färgtema enligt specifikation
+- Använda Flexbox för bildgallerier
+- Säkerställa god kontrast och läsbarhet
+- Skapa responsiv layout med media queries
+
+
+
+### 4️⃣ JavaScript-funktionalitet
+- Implementera ljust/mörkt läge i `main.js`
+- Spara användarens val i `localStorage`
+- Dynamiskt uppdatera årtal i footer
+- Hantera interaktioner och navigering
+
+
+
+### 5️⃣ Testning & Kvalitetssäkring
+- Testa webbplatsen på olika skärmstorlekar
+- Testa tema-växling
+- Kontrollera Google Maps-länkar
+- Validera HTML och CSS
+
+
+
+## 🎨 Färgtema
+
+### 🔴 Temafärger
 - Primary: `#E10600`
 - Hover: `#B10500`
 - Subtle: `#FCE8E6`
 
----
 
-## 🌕 Ljus läge
+
+### 🌕 Ljust läge
 - Background: `#F8F9FB`
 - Surface / Card: `#FFFFFF`
 - Border / Divider: `#E5E7EB`
@@ -20,9 +140,9 @@ Hemsidan ska vara till staden gävle. Det ska vara en informations sida om olika
 - Text Secondary: `#475569`
 - Text Muted: `#94A3B8`
 
----
 
-## 🌑 Mörk läge
+
+### 🌑 Mörkt läge
 - Background: `#0B0F14`
 - Surface / Card: `#111827`
 - Border / Divider: `#1F2933`
@@ -31,10 +151,12 @@ Hemsidan ska vara till staden gävle. Det ska vara en informations sida om olika
 - Text Secondary: `#9CA3AF`
 - Text Muted: `#6B7280`
 
----
 
-## 🟢 Status Färger
+
+### 🟢 Statusfärger
 - Success: `#22C55E`
 - Warning: `#F59E0B`
 - Error: `#EF4444`
 - Info: `#38BDF8`
+```
+
