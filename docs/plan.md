@@ -1,5 +1,7 @@
 # Syfte
 
+Hemsidan ska vara till staden gävle. Det ska vara en informations sida om olika platser inom gävle. Det ska vara som följer Boulongerskogen, Gävlebocken (bilder måste tas ifrån online men följa Upphovsrätten), Järnvägsmuseet, Fängelsemuseet, Gävle Konserthus, Fjärran höjder. Alla platser ska ha 1-3 bilder och alla förutom Gävle bocken ska tas själv. Värje plats/bild ska ha kort information om platsen. Det ska finnas en knapp som man kan byta emellan Ljus/Mörkt på hemsidan detta ska göras med hjälp av javascript. Detta ska sparas i lokalstorage på enheten så vi slipper ha en database bakom hemsidan. Hemsidan ska ha en navbar för dess olika platser samt övrig information som kontakt/om oss, samt footer med år tal, det ska hämtas med javascript så via kan dynamiskt uppdatera footer så hemsidan inte måste underhållas. 
+
 # 🎨 Färg tema 
 
 ## 🔴 Tema färger
