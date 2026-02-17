@@ -63,12 +63,12 @@ src/
 ├── js/
 │   └── main.js
 └── platser/
-├── boulognerskogen.html
-├── gavlebocken.html
-├── jarnvagsmuseet.html
-├── fangelsemuseet.html
-├── konserthuset.html
-└── fjarran-hojder.html
+    ├── boulognerskogen.html
+    ├── gavlebocken.html
+    ├── jarnvagsmuseet.html
+    ├── fangelsemuseet.html
+    ├── konserthuset.html
+    └── fjarran-hojder.html
 
 ```
 
