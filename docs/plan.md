@@ -86,8 +86,8 @@ src/
 
 ### 1️⃣ Planering
 - Välja platser och samla information
-- Ta egna bilder
-- Säkerställa upphovsrätt för externa bilder
+- Ta egna bilder (eller lägga till temporära bilder tills egna har tagits)
+- Säkerställa upphovsrätt för externa bilder (eller lägg till temporära bilder tills bilder har hittats som uppföljer Upphovsrätten)
 
 
 
