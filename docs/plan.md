@@ -54,26 +54,29 @@ För varje plats gäller:
 #### Fil- och mappstruktur
 Projektet ska använda följande struktur:
 
-```
+src/
 
+```
 src/
 ├── index.html
+├── om-oss.html
+├── kontakt.html
 ├── css/
 │   └── style.css
 ├── js/
 │   └── main.js
 └── platser/
-    ├── boulognerskogen.html
-    ├── gavlebocken.html
-    ├── jarnvagsmuseet.html
-    ├── fangelsemuseet.html
-    ├── konserthuset.html
-    └── fjarran-hojder.html
-
+  ├── boulognerskogen.html
+  ├── gavlebocken.html
+  ├── jarnvagsmuseet.html
+  ├── fangelsemuseet.html
+  ├── konserthuset.html
+  └── fjarran-hojder.html
 ```
 
 - `index.html` ska ligga i `src/`
 - Alla platser ska ha **egna HTML-filer** i `src/platser/`
+- Sidorna **Om oss** och **Kontakt** ska ha egna HTML-filer i `src/` (`om-oss.html`, `kontakt.html`)
 - All JavaScript-kod ska ligga i `src/js/main.js`
 - All CSS ska ligga i extern fil:  
   `src/css/style.css`
