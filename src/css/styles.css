@@ -1,0 +1,223 @@
+:root {
+  --primary: #E10600;
+  --primary-hover: #B10500;
+  --subtle: #FCE8E6;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #38BDF8;
+
+  /* Light mode */
+  --bg: #F8F9FB;
+  --surface: #fff;
+  --border: #E5E7EB;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+
+  /* Dark mode */
+  --bg-dark: #0B0F14;
+  --surface-dark: #111827;
+  --border-dark: #1F2933;
+  --text-primary-dark: #E5E7EB;
+  --text-secondary-dark: #9CA3AF;
+  --text-muted-dark: #6B7280;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-primary-dark);
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  transition: background 0.3s, border 0.3s;
+}
+body.dark header {
+  background: var(--surface-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3em 0.7em;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover, .nav-links a:focus {
+  background: var(--subtle);
+  color: var(--primary);
+}
+body.dark .nav-links a {
+  color: var(--text-secondary-dark);
+}
+body.dark .nav-links a:hover, body.dark .nav-links a:focus {
+  background: var(--primary-hover);
+  color: #fff;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--primary);
+  margin-left: 1rem;
+  transition: color 0.2s;
+}
+#theme-toggle:hover {
+  color: var(--primary-hover);
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto 1rem auto;
+  padding: 0 1rem;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plats-info {
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  transition: background 0.3s, border 0.3s;
+}
+body.dark .plats-info {
+  background: var(--surface-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.plats-info h1 {
+  margin-top: 0;
+}
+
+.plats-bilder {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.plats-bilder img {
+  max-width: 260px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: border 0.3s;
+}
+
+.maps-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.maps-container iframe {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  max-width: 100%;
+}
+
+body.dark .plats-bilder img {
+  border: 1px solid var(--border-dark);
+  background: var(--surface-dark);
+}
+
+body.dark .maps-container iframe {
+  border: 1px solid var(--border-dark);
+  background: var(--surface-dark);
+}
+
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: background 0.3s, border 0.3s, color 0.3s;
+}
+body.dark footer {
+  background: var(--surface-dark);
+  border-top: 1px solid var(--border-dark);
+  color: var(--text-muted-dark);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  main {
+    padding: 0 0.3rem;
+  }
+  .plats-bilder {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .plats-info {
+    padding: 1rem 0.5rem;
+  }
+}
