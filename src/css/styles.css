@@ -55,7 +55,7 @@ body.dark header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1250px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
 }
@@ -198,26 +198,57 @@ body.dark footer {
   color: var(--text-muted-dark);
 }
 
+
+@media (max-width: 900px) {
+  main {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .navbar {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 700px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+    padding: 0.5rem 0.3rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
   main {
-    padding: 0 0.3rem;
+    padding: 0 0.2rem;
   }
   .plats-bilder {
     flex-direction: column;
     align-items: center;
   }
+  .plats-bilder img {
+    max-width: 98vw;
+    min-width: 0;
+  }
+  .maps-container iframe {
+    width: 98vw !important;
+    min-width: 0;
+    height: 220px !important;
+  }
 }
 
 @media (max-width: 500px) {
   .hero h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .plats-info {
-    padding: 1rem 0.5rem;
+    padding: 0.7rem 0.2rem;
+    font-size: 0.98rem;
+  }
+  .nav-links a {
+    font-size: 0.98rem;
+    padding: 0.2em 0.4em;
   }
 }
