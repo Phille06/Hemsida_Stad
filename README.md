@@ -37,6 +37,7 @@ raw_img/               # Bilder till platserna
 
 Ingen server eller installation krävs – allt fungerar direkt i webbläsaren.
 
-## Licens
+## Licenser
 
-MIT License. Se LICENSE för mer information.
+- **Kod:** [MIT License](LICENSE)  
+- **Bilder:** Se [ATTRIBUTION.md](ATTRIBUTION.md) för bildkällor och licenser.
